@@ -1,0 +1,42 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Temporary files
+*.tmp
+*.log
+*.swp
+
+# Directories
+vendor/
+bin/
+build/
+dist/
+tmp/
+.idea/
+.vscode/
+.DS_Store
+
+# Editor files
+*.iml
+
+# Go Modules
+/go/bin
+/go/pkg
+
+# Local environment variables
+.env
+
+# Custom config files
+config.yaml
+config.json
+
+# Polycode related
+.polycode/*.go
+!.polycode/dummy.go
