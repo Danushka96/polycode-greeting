@@ -3,7 +3,7 @@ module portal/register
 go 1.22.0
 
 require (
-	github.com/cloudimpl/next-coder-sdk v0.116.0
+	github.com/cloudimpl/next-coder-sdk v0.156.0
 	github.com/gin-contrib/cors v1.7.2
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-playground/validator/v10 v10.20.0
