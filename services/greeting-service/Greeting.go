@@ -7,6 +7,6 @@ import (
 
 func Greeting(ctx polycode.ServiceContext, input model.HelloRequest) (model.HelloResponse, error) {
 	return model.HelloResponse{
-		Message: "Hello  + input.Name,
+		Message: "Hello"  + input.Name,
 	}, nil
 }
