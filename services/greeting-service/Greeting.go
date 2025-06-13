@@ -10,3 +10,9 @@ func Greeting(ctx polycode.ServiceContext, input model.HelloRequest) (model.Hell
 		Message: "Hello " + input.Name,
 	}, nil
 }
+
+func WSGreeting(ctx polycode.WorkflowContext, input model.HelloRequest) (model.HelloResponse, error) {
+	response := model.HelloResponse{Message: "Hello " + input.Name}
+	err := ctx.EmitRealtimeEvent("xxx/channel2", response)
+	return response, err
+}

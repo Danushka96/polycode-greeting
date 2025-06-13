@@ -18,4 +18,16 @@ func greeting(ctx polycode.WorkflowContext, input model.HelloRequest) (model.Hel
 	return output, nil
 }
 
+func wsGreeting(ctx polycode.WorkflowContext, input model.HelloResponse) (model.HelloResponse, error) {
+	greetingService := ctx.Service("greeting-service").Get()
+
+	var output model.HelloResponse
+	res := greetingService.RequestReply(polycode.TaskOptions{}, "WSGreeting", input)
+	if err := res.Get(&output); err != nil {
+		return model.HelloResponse{}, err
+	}
+
+	return output, nil
+}
+
 var Greeting = api.FromWorkflow(greeting)
