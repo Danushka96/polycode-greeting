@@ -31,3 +31,4 @@ func wsGreeting(ctx polycode.WorkflowContext, input model.HelloResponse) (model.
 }
 
 var Greeting = api.FromWorkflow(greeting)
+var WSGreeting = api.FromWorkflow(wsGreeting)

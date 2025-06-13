@@ -19,6 +19,6 @@ func main() {
 	config.AllowHeaders = append(config.AllowHeaders, "x-polycode-partition-key")
 	r.Use(cors.New(config))
 	r.POST("/greeting", controllers.Greeting)
-
+	r.POST("/wsGreeting", controllers.WSGreeting)
 	polycode.StartApp(r)
 }
