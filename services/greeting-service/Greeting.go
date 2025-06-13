@@ -7,12 +7,12 @@ import (
 
 func Greeting(ctx polycode.ServiceContext, input model.HelloRequest) (model.HelloResponse, error) {
 	return model.HelloResponse{
-		Message: "Hello"  + input.Name,
+		Message: "Hello" + input.Name,
 	}, nil
 }
 
 func WSGreeting(ctx polycode.WorkflowContext, input model.HelloRequest) (model.HelloResponse, error) {
 	response := model.HelloResponse{Message: "Hello " + input.Name}
-	err := ctx.EmitRealtimeEvent("xxx/channel2", response)
+	err := ctx.EmitRealtimeEvent("channel2", response)
 	return response, err
 }
