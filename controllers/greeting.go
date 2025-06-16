@@ -18,7 +18,7 @@ func greeting(ctx polycode.WorkflowContext, input model.HelloRequest) (model.Hel
 	return output, nil
 }
 
-func wsGreeting(ctx polycode.WorkflowContext, input model.HelloResponse) (model.HelloResponse, error) {
+func wsGreeting(ctx polycode.WorkflowContext, input model.HelloRequest) (model.HelloResponse, error) {
 	greetingService := ctx.Service("greeting-service").Get()
 
 	var output model.HelloResponse
